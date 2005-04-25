@@ -37,14 +37,20 @@ lub Harbour do ¶rodowiska relacyjnej bazy danych, co oznacza koniec
 problemów z uszkodzonymi indeksami, zbyt du¿ymi tabelami czy
 niedostateczn± ochron±.
 
-#%package client
-#Summary: mediator client
-#Summary(pl): Klient mediatora
-#Group: -
+%package client
+Summary: mediator client
+Summary(pl): Klient mediatora
+Group: Applications
 
-#%description subpackage
+%description client 
+This is linux-based client for mediator. Thease files are usefull if you 
+develop xbase/xharbour/clipper code on Linux platform. It's not needed 
+for running normal server. 
 
-#%description subpackage -l pl
+%description client -l pl
+To jest bazuj±cy na linuksie klient mediatora. Pliki te s± u¿yteczne je¶li 
+rozwijasz oprogramowanie xbase/xharbour/clipper pracuj±ce na platformie 
+linuksowej. Ten pakiet nie jest konieczny aby uruchomiæ zwyk³y serwer.
 
 %package mysql
 Summary:	Mediator for MySQL
@@ -52,10 +58,10 @@ Summary(pl):	Mediator dla MySQL-a
 Group:		Applications
 
 %description mysql
-Mediator for MySQL.
+Mediator server for MySQL.
 
 %description mysql -l pl
-Mediator dla MySQL-a.
+Serwer Mediatora dla MySQL-a.
 
 %package postgresql 
 Summary:	Mediator for PostgreSQL
@@ -63,10 +69,10 @@ Summary(pl):	Mediator dla PostgreSQL-a
 Group:		Applications
 
 %description postgresql
-Mediator for PostgreSQL.
+Mediator server for PostgreSQL.
 
 %description postgresql -l pl
-Mediator dla PostgreSQL-a.
+Serwer Mediatora dla PostgreSQL-a.
 
 %prep
 %setup -q -c
@@ -74,27 +80,39 @@ Mediator dla PostgreSQL-a.
 %build
 mkdir pgsql
 cd pgsql
-tar xfvz %{SOURCE2}
+tar xfz %{SOURCE2}
 cd ..
 
 mkdir mysql
 cd mysql
-tar xfvz %{SOURCE1}
+tar xfz %{SOURCE1}
 cd ..
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{/var/lib/mediator,%{_bindir}}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}/{hb,xhb}
+
+#cp -avR medcl/ %_datadir/{%name} ???
 
 install pgsql/mediator $RPM_BUILD_ROOT%{_bindir}/mediator-pgsql
 install mysql/mediator $RPM_BUILD_ROOT%{_bindir}/mediator-mysql
 
+install medcl/hb/source/sample/medntx/*.prg $RPM_BUILD_ROOT%{_examplesdir}/%{name}/hb
+install medcl/xhb/source/sample/medntx/*.prg $RPM_BUILD_ROOT%{_examplesdir}/%{name}/xhb
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+# XXX: Don't remove licence file from main package!
 %files
 %defattr(644,root,root,755)
-#%doc pgsql/msvpsqlxpl.txt mysql/msvmsqlxpl.txt
+%doc medcl/doc/licencja.txt
+
+%files client
+%doc medcl/doc/{Progd42.pdf,Progd42e.pdf,instcllx.txt,instcllxpl.txt}
+%{_examplesdir}/%{name}/hb/*.prg
+%{_examplesdir}/%{name}/xhb/*.prg
 
 %files mysql
 %defattr(644,root,root,755)
