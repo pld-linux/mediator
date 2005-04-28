@@ -38,19 +38,20 @@ problemów z uszkodzonymi indeksami, zbyt du¿ymi tabelami czy
 niedostateczn± ochron±.
 
 %package client
-Summary: mediator client
-Summary(pl): Klient mediatora
-Group: Applications
+Summary:	Mediator client
+Summary(pl):	Klient Mediatora
+Group:		Applications
 
 %description client 
-This is linux-based client for mediator. Thease files are usefull if you 
-develop xbase/xharbour/clipper code on Linux platform. It's not needed 
-for running normal server. 
+This is Linux-based client for Mediator. These files are useful if you
+develop xbase/xharbour/clipper code on Linux platform. They are not
+needed for running normal server. 
 
 %description client -l pl
-To jest bazuj±cy na linuksie klient mediatora. Pliki te s± u¿yteczne je¶li 
-rozwijasz oprogramowanie xbase/xharbour/clipper pracuj±ce na platformie 
-linuksowej. Ten pakiet nie jest konieczny aby uruchomiæ zwyk³y serwer.
+To jest oparty na Linuksie klient Mediatora. Pliki te s± u¿yteczne do
+rozwijania oprogramowania xbase/xharbour/clipper pracuj±cego na
+platformie linuksowej. Ten pakiet nie jest konieczny aby uruchomiæ
+zwyk³y serwer.
 
 %package mysql
 Summary:	Mediator for MySQL
