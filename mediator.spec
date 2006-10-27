@@ -112,6 +112,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %files client
 %doc medcl/doc/{Progd42.pdf,Progd42e.pdf,instcllx.txt,instcllxpl.txt}
+%dir %{_examplesdir}/%{name}
+%dir %{_examplesdir}/%{name}/hb
+%dir %{_examplesdir}/%{name}/xhb
 %{_examplesdir}/%{name}/hb/*.prg
 %{_examplesdir}/%{name}/xhb/*.prg
 
