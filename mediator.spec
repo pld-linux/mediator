@@ -2,7 +2,7 @@
 # Note: RPMS should be placed in contrib/supported dirs on ftp site
 #
 Summary:	Mediator - SQL backend for your xbase/clipper applications
-Summary(pl):	Mediator - Backend SQL dla aplikacji xbase/clipper
+Summary(pl.UTF-8):   Mediator - Backend SQL dla aplikacji xbase/clipper
 Name:		mediator
 Version:	4222
 Release:	0.1
@@ -31,15 +31,15 @@ Mediator enables porting any Delphi, CA-Clipper, CA-Visual Objects or
 in practice means the end of problems with damaged indexes, too large
 tables or unsatisfactory data protection.
 
-%description -l pl
-Mediator umo¿liwia przeniesienie dowolnej aplikacji Delphi, CA-Clipper
-lub Harbour do ¶rodowiska relacyjnej bazy danych, co oznacza koniec
-problemów z uszkodzonymi indeksami, zbyt du¿ymi tabelami czy
-niedostateczn± ochron±.
+%description -l pl.UTF-8
+Mediator umoÅ¼liwia przeniesienie dowolnej aplikacji Delphi, CA-Clipper
+lub Harbour do Å›rodowiska relacyjnej bazy danych, co oznacza koniec
+problemÃ³w z uszkodzonymi indeksami, zbyt duÅ¼ymi tabelami czy
+niedostatecznÄ… ochronÄ….
 
 %package client
 Summary:	Mediator client
-Summary(pl):	Klient Mediatora
+Summary(pl.UTF-8):   Klient Mediatora
 Group:		Applications
 
 %description client 
@@ -47,32 +47,32 @@ This is Linux-based client for Mediator. These files are useful if you
 develop xbase/xharbour/clipper code on Linux platform. They are not
 needed for running normal server. 
 
-%description client -l pl
-To jest oparty na Linuksie klient Mediatora. Pliki te s± u¿yteczne do
-rozwijania oprogramowania xbase/xharbour/clipper pracuj±cego na
-platformie linuksowej. Ten pakiet nie jest konieczny aby uruchomiæ
-zwyk³y serwer.
+%description client -l pl.UTF-8
+To jest oparty na Linuksie klient Mediatora. Pliki te sÄ… uÅ¼yteczne do
+rozwijania oprogramowania xbase/xharbour/clipper pracujÄ…cego na
+platformie linuksowej. Ten pakiet nie jest konieczny aby uruchomiÄ‡
+zwykÅ‚y serwer.
 
 %package mysql
 Summary:	Mediator for MySQL
-Summary(pl):	Mediator dla MySQL-a
+Summary(pl.UTF-8):   Mediator dla MySQL-a
 Group:		Applications
 
 %description mysql
 Mediator server for MySQL.
 
-%description mysql -l pl
+%description mysql -l pl.UTF-8
 Serwer Mediatora dla MySQL-a.
 
 %package postgresql 
 Summary:	Mediator for PostgreSQL
-Summary(pl):	Mediator dla PostgreSQL-a
+Summary(pl.UTF-8):   Mediator dla PostgreSQL-a
 Group:		Applications
 
 %description postgresql
 Mediator server for PostgreSQL.
 
-%description postgresql -l pl
+%description postgresql -l pl.UTF-8
 Serwer Mediatora dla PostgreSQL-a.
 
 %prep
