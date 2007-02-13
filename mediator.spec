@@ -2,7 +2,7 @@
 # Note: RPMS should be placed in contrib/supported dirs on ftp site
 #
 Summary:	Mediator - SQL backend for your xbase/clipper applications
-Summary(pl.UTF-8):   Mediator - Backend SQL dla aplikacji xbase/clipper
+Summary(pl.UTF-8):	Mediator - Backend SQL dla aplikacji xbase/clipper
 Name:		mediator
 Version:	4222
 Release:	0.1
@@ -39,7 +39,7 @@ niedostateczną ochroną.
 
 %package client
 Summary:	Mediator client
-Summary(pl.UTF-8):   Klient Mediatora
+Summary(pl.UTF-8):	Klient Mediatora
 Group:		Applications
 
 %description client 
@@ -55,7 +55,7 @@ zwykły serwer.
 
 %package mysql
 Summary:	Mediator for MySQL
-Summary(pl.UTF-8):   Mediator dla MySQL-a
+Summary(pl.UTF-8):	Mediator dla MySQL-a
 Group:		Applications
 
 %description mysql
@@ -66,7 +66,7 @@ Serwer Mediatora dla MySQL-a.
 
 %package postgresql 
 Summary:	Mediator for PostgreSQL
-Summary(pl.UTF-8):   Mediator dla PostgreSQL-a
+Summary(pl.UTF-8):	Mediator dla PostgreSQL-a
 Group:		Applications
 
 %description postgresql
